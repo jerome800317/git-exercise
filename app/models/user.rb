@@ -1,6 +1,6 @@
 class User < ApplicationRecord
 	def admin?
-		if self.id == 1 
+		if Rails.env.development? 
 			return "Admin"
 		end
 	end
